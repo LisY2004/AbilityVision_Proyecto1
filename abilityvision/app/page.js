@@ -1,32 +1,35 @@
+import Header from "../components/Header";
+import Section from "../components/Section";
 
-
-import Image from "next/image";
-export default function Home() {
+export default function AIPage() {
   return (
-    <div className="grid grid-rows-[1fr_auto] items-center justify-items-center min-h-screen p-8 sm:p-20 bg-gradient-to-br from-blue-100 to-green-300 font-sans">
-      <main className="flex flex-col gap-6 items-center text-center bg-white p-10 rounded-xl shadow-xl">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-200 p-8 sm:p-20 font-sans">
+      <Header />
 
-        <h1 className="text-3xl font-bold text-green-800">Universidad de las fuerzas Armadas (Espe)</h1>
+      <main>
+        <Section title="¿Qué es la Inteligencia Artificial?">
+          <p>
+            La inteligencia artificial es un campo que combina ciencia de la computación, matemáticas y estadística para desarrollar algoritmos que permiten a las máquinas aprender, razonar y tomar decisiones (Russell & Norvig, 2020). Algunos ejemplos comunes incluyen reconocimiento facial, asistentes virtuales y vehículos autónomos.
+          </p>
+        </Section>
 
-        <p className="text-lg text-gray-700">
-          <span className="font-semibold">Nombre:</span> Lisbeth Yupangui
-        </p>
-        <p className="text-lg text-gray-700">
-          <span className="font-semibold">Carrera:</span> Ing. Software
-        </p>
-        <p className="text-lg text-gray-700">
-          <span className="font-semibold">Asignatura:</span> Desarrollo web Avanzado
-        </p>
-        <p className="text-lg text-gray-700">
-          <span className="font-semibold">Proyecto:</span> Ability Vision
-        </p>
-        <p className="text-lg text-gray-700">
-          <span className="font-semibold">Proposito:</span> El propósito es facilitar el aprendizaje inclusivo, promoviendo autonomía,<br/> accesibilidad y participación activa de niños con discapacidad visual.
-        </p>
+        <Section title="Tipos de Inteligencia Artificial">
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>IA débil:</strong> Sistemas diseñados para realizar tareas específicas, como Siri o Alexa.</li>
+            <li><strong>IA fuerte:</strong> Sistemas con capacidades cognitivas generales similares a las humanas, aún en desarrollo.</li>
+            <li><strong>Aprendizaje automático:</strong> Técnica que permite a las máquinas aprender de datos sin programación explícita.</li>
+          </ul>
+        </Section>
+
+        <Section title="Aplicaciones actuales">
+          <p>
+            La IA está presente en múltiples sectores: salud (diagnóstico asistido), finanzas (análisis de riesgos), industria (robots autónomos) y entretenimiento (recomendadores de contenido), transformando la forma en que interactuamos con la tecnología.
+          </p>
+        </Section>
       </main>
 
-      <footer className="text-xs text-gray-600 mt-10">
-        Proyecto Next.js - {new Date().getFullYear()}
+      <footer className="max-w-4xl mx-auto text-center mt-16 text-sm text-gray-600">
+        © {new Date().getFullYear()} Página informativa creada con Next.js y Tailwind CSS
       </footer>
     </div>
   );
